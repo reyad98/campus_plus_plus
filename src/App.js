@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./App.css";
+import Admission from "./Pages/Admission/Admission";
+import Footer from "./Pages/Footer/Footer";
+import Home from "./Pages/Home/Home";
+import Navbar from "./Pages/Navbar/Navbar";
+import Notice from "./Pages/Navbar/Notice";
+import Topnav from "./Pages/Navbar/Topnav";
+import NoticePage from "./Pages/NoticePage/NoticePage";
+import ScrollToTop from "./Pages/Scroll/ScrollToTop";
+import Teachers from "./Pages/Teachers/Teachers";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <ScrollToTop></ScrollToTop>
+        <Topnav />
+        <Navbar />
+        <Notice />
+        <Routes>
+          <Route path="/notice" element={<NoticePage/>} />
+          <Route path="admission/applynow" element={<Admission></Admission> } />
+          <Route path="administration/teachers" element={<Teachers></Teachers> } />
+
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

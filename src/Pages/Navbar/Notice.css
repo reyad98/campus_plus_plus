@@ -1,0 +1,42 @@
+/* NoticeBar.css */
+.notice-bar {
+  display: flex;
+  align-items: center;
+  background-color: #53d8c2;
+  padding: 0px;
+}
+
+.latest-notice {
+  background-color: #04584d;
+  padding: 10px 40px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.latest-notice a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.notice-text {
+  flex: 1; /* Take remaining space */
+  overflow: hidden; /* Hide any overflowing text */
+}
+
+marquee {
+  font-size: 14px;
+  font-weight: bold;
+  color: #04584d;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.notice-text:hover marquee {
+  animation-play-state: paused; /* Stop the animation on hover */
+}
+
+.notice-bar span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #023a33;
+}

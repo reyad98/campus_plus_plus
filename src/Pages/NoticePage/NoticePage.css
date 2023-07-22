@@ -1,0 +1,49 @@
+/* Notices.css */
+.notices-page {
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.313); /* You can adjust the values as needed */
+  padding: 15px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.notices-page h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.notices-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notices-table th,
+.notices-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.notices-table th {
+  background-color: #ffffff;
+  color: rgb(7, 7, 7);
+}
+
+.notices-table tbody tr:nth-child(even) {
+  background-color: #f3f3f3; /* Ash color for even rows */
+}
+
+.notices-table tbody tr:nth-child(odd) {
+  background-color: #dfdfdf; /* Green color for odd rows */
+}
+
+.notices-table td:last-child svg {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.iconcolor {
+  color: rgb(3, 124, 94);
+  font-weight: 500;
+}

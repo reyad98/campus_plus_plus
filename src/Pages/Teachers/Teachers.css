@@ -1,0 +1,74 @@
+/* Teachers.css */
+.teachers-container {
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.313);
+  padding: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.teachers-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.teachers-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.teachers-list {
+  flex-basis: 60%;
+}
+
+.teacher-card {
+  display: flex;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.313);
+  border: 1px dotted #ccc;
+  margin-bottom: 20px;
+}
+
+.teacher-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.teacher-details {
+  margin-left: 20px;
+}
+
+.teacher-details p {
+  margin: 5px 0;
+}
+
+.teachers-sidebar {
+  flex-basis: 35%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: rgb(236, 236, 236);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.313);
+
+  margin-bottom: 20px;
+}
+
+.teachers-sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.teachers-sidebar select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.search-container input {
+  width: 94%;
+  padding: 10px;
+}

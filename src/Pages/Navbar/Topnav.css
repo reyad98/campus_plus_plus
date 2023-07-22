@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #044b42;
+  color: #fff;
+  padding: 3px 40px;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar-logo_login {
+  color: #090909;
+  background-color: #54d2bd;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.navbar-menu {
+  font-size: medium;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  padding: 12px;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+  }
+
+  .navbar-item {
+    margin: 5px 0;
+  }
+}
