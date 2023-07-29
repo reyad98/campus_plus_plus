@@ -8,13 +8,16 @@
 
 .latest-notice {
   background-color: #04584d;
-  padding: 10px 40px;
-  margin-left: 20px;
+  padding: 6px;
+  margin-left: 40px;
   margin-right: 10px;
 }
 
 .latest-notice a {
-  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  color: #d4fff1;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -36,7 +39,15 @@ marquee {
 }
 
 .notice-bar span {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: #023a33;
+}
+
+@media (max-width: 768px) {
+  .latest-notice {
+    background-color: #04584d;
+    padding: 6px;
+    margin-left: 10px;
+  }
 }

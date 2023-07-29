@@ -15,12 +15,14 @@
 .footer-column {
   flex: 1;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .footer-column h3 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .footer-column ul {
@@ -31,6 +33,7 @@
 
 .footer-column li {
   margin-bottom: 8px;
+  text-align: left;
 }
 
 .footer-column a {
@@ -48,4 +51,48 @@
   padding-top: 10px;
   border-top: 1px solid #ccc;
   font-size: 14px;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to center the icons horizontally */
+}
+
+.social-icon {
+  text-decoration: none;
+
+  font-size: 24px;
+  color: #f4f4f4;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #30b19c8a;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .main-footer-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    margin-top: 30px;
+  }
+
+  .social-icon {
+    font-size: 18px;
+    color: #f4f4f4;
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1590658a;
+    border-radius: 50%;
+  }
+
+  /* Rest of your styles... */
 }

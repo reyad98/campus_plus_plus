@@ -27,7 +27,7 @@ const NoticePage = () => {
     {
       date: "12 july, 2023",
       serial: 4,
-      title: "বিভিন্ন রুটে গাড়ী ছাড়ার সময়সূচি",
+      title: "২০২৩ সালের আন্তঃ স্কুল ফুটবল টুর্নামেন্ট শুরু!!!",
       department: "Academic Notice",
     },
     // Add more notice data as needed

@@ -13,12 +13,15 @@ import img6 from "../images/img6.jpg";
 import img7 from "../images/img7.jpg";
 import img8 from "../images/img8.jpg";
 import img9 from "../images/img9.jpg";
+import news1 from "../images/news1.jpg";
 
 import { Link } from "react-router-dom";
+import BoardResult from "../Result/BoardResult";
 import "./Home.css";
+import RecentActivity from "./RecentActivity";
 
 const Home = () => {
-  const images = [img1, img2, img4, img5, img9];
+  const images = [img1, img2, img4, news1, img9];
 
   const imges_store = [img6, img7, img8, img3, img10, img11, img12, img13];
 
@@ -77,10 +80,6 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {/* <header className="header">
-        <h1>Welcome to Coding Academy</h1>
-        <p>Empowering Minds, Transforming Lives</p>
-      </header> */}
       <section className="carousel-section">
         <div className="carousel-container">
           {images.map((image, index) => (
@@ -93,16 +92,15 @@ const Home = () => {
         </div>
 
         <div className="message-from-principal">
-          <img src={img9} alt="Principal" className="principal-image" />
+          <h2>Principal Message</h2>
+
+          <img src={img8} alt="Principal" className="principal-image" />
           <div className="principal-info">
-            <h2>Message from Principal</h2>
             <p>
-              I am delighted to welcome you all to our esteemed institution,
-              where we strive for excellence in education and character
-              development. At Coding School.Our dedicated team of teachers and
-              staff are devoted to guiding and empowering our students to
-              achieve their goals and reach new heights of success.
+              <strong>Colonel Babar Md. Salim, psc, MDS, MBA (Retd.)</strong>
             </p>
+
+            <Link to="/administration/principalmessage">See More...</Link>
           </div>
         </div>
       </section>
@@ -138,21 +136,21 @@ const Home = () => {
           <button className="read-more-btn">Read More</button>
         </div>
         <div className="right-section_home">
-          <div className="info-box">
+          <div className="info-box1">
             <h3>400+</h3>
             <h3>Students</h3>
           </div>
-          <div className="info-box">
+          <div className="info-box2">
             <h3>30+</h3>
             <h3>Teachers</h3>
           </div>
-          <div className="info-box">
+          <div className="info-box3">
             <h3>10+</h3>
             <h3>Total Staff</h3>
           </div>
           <div className="images-row">
             <div className="image-box">
-              <img src={images[2]} alt="Image 1" />
+              <img src={images[3]} alt="Image 1" />
             </div>
             <div className="image-box">
               <img src={images[1]} alt="Image 2" />
@@ -164,36 +162,70 @@ const Home = () => {
       <section className="notice-board-section">
         <div className="notice-section">
           <h2>নোটিশ বোর্ড</h2>
-          {notices.map((notice) => (
+          {notices.map((notice, index) => (
             <div className="notice-row" key={notice.id}>
+              <div className="notice-serial">{index + 1}</div>
               <div className="notice-date">{notice.date}</div>
               <div className="notice">{notice.notice}</div>
             </div>
           ))}
+          {notices.length >= 3 && (
+            <div className="more-button">
+              <Link to="/notice">
+                <i className="fas fa-chevron-circle-right"></i> More
+              </Link>
+            </div>
+          )}
         </div>
 
         <div className="important-links-section">
           <h2>গুরুত্বপূর্ণ লিঙ্কসমূহ</h2>
-          <div className="link-row">
-            <Link to="/official-website">অফিসিয়াল ওয়েবসাইট</Link>
-          </div>
-          <div className="link-row">
-            <Link to="/bd-govt">বাংলাদেশ সরকার</Link>
-          </div>
-          <div className="link-row">
-            <Link to="/bd-educational-board">বাংলাদেশ শিক্ষামন্ত্রণালয়</Link>
-          </div>
-          <div className="link-row">
-            <Link to="/ssc-result">এসএসসি রেজাল্ট</Link>
-          </div>
-          <div className="link-row">
-            <Link to="/hsc-result">এইচএসসি রেজাল্ট</Link>
-          </div>
-          <div className="link-row">
-            <Link to="/website-in-bangla">বাংলায় ওয়েবসাইট</Link>
-          </div>
+          <Link to="/official-website">
+            <div className="link-row">
+              <i className="link-icon fas fa-external-link"></i>
+              শিক্ষা বোর্ড ফলাফল
+            </div>
+          </Link>
+          <Link to="/bd-govt">
+            <div className="link-row">
+              <i className="link-icon fas fa-external-link"></i>
+              মাধ্যমিক ও উচ্চশিক্ষা বোর্ড
+            </div>
+          </Link>
+          <Link to="/bd-educational-board">
+            <div className="link-row">
+              <i className="link-icon fas fa-external-link"></i>
+              মাধ্যমিক ও উচ্চশিক্ষা অধিদপ্তর
+            </div>
+          </Link>
+          <Link to="/bd-statistical-bureau">
+            <div className="link-row">
+              <i className="link-icon fas fa-external-link"></i>
+              বাংলাদেশ পরিসংখ্যান ব্যুরো
+            </div>
+          </Link>
+          <Link to="/education-ministry">
+            <div className="link-row">
+              <i className="link-icon fas fa-external-link"></i>
+              শিক্ষা মন্ত্রণালয়
+            </div>
+          </Link>
+          <Link to="/primary-and-mass-education-ministry">
+            <div className="link-row">
+              <i className="link-icon fas fa-external-link"></i>
+              প্রাথমিক ও গণশিক্ষা মন্ত্রণালয়
+            </div>
+          </Link>
+          <Link to="/secondary-and-higher-education-division">
+            <div className="link-row">
+              <i className="link-icon fas fa-external-link"></i>
+              মাধ্যমিক ও উচ্চ শিক্ষা বিভাগ
+            </div>
+          </Link>
         </div>
       </section>
+
+      <RecentActivity></RecentActivity>
 
       <section className="latest-news-section">
         <h2>সর্বশেষ খবর আপডেট</h2>
@@ -211,6 +243,8 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <BoardResult></BoardResult>
 
       <section className="admission-open-section">
         <div className="admission-images">

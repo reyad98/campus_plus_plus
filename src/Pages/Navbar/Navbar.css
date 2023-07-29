@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
-  color: #8d2727;
   padding: 0 15px;
 }
 
@@ -16,7 +15,7 @@ small {
 }
 
 .left-section {
-  margin-left: 38px;
+  margin-left: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +27,8 @@ small {
 }
 
 .right-section {
+  padding: 10px;
+  margin-right: 6px;
 }
 
 .nav-links {
@@ -37,14 +38,15 @@ small {
   padding: 0px;
 }
 
-.nav-links li {
+.right-section li {
+  font-size: 14px;
   position: relative;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .nav-links li a {
   text-decoration: none; /* Remove underline from links */
-  color: #53d8c2;
+  color: #1ab39a;
 }
 
 .nav-links li span {
@@ -54,7 +56,7 @@ small {
 
 /* Change text color on hover for nav-links */
 .nav-links li:hover span {
-  color: #056477; /* Change to the desired color when hovering */
+  color: #1cc3aa; /* Change to the desired color when hovering */
 }
 
 .dropdown-content a {
@@ -62,7 +64,7 @@ small {
   text-decoration: none;
   display: block; /* Display each option as a block to stack them vertically */
   position: relative;
-  color: #53d8c2;
+  color: #d6fff8;
 }
 
 .dropdown-content a::after {
@@ -80,9 +82,10 @@ small {
   position: absolute;
   top: 100%;
   left: 0;
+  border-radius: 4px;
   display: none;
-  background-color: #04584d;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #03312ae6;
+  box-shadow: 0px 8prgb (7, 45, 40) 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 30px;
   min-width: 200px;
@@ -93,15 +96,22 @@ small {
   transition: max-height 0.3s ease; /* Set the transition property */
 }
 
-/* Add the following CSS rule to handle the hover effect */
+/* DropdownContent.css */
 .dropdown:hover .dropdown-content {
   display: block;
   opacity: 1;
   max-height: 500px; /* Set an appropriate max-height value that accommodates your content */
+  transition: max-height 0.3s ease, opacity 0.3s ease; /* Add the desired transition effect */
 }
 
 span {
   font-size: 13px;
   font-weight: bold;
   color: #066454;
+}
+
+@media (max-width: 768px) {
+  .left-section {
+    margin-left: -5px;
+  }
 }

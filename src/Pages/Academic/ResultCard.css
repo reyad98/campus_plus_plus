@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.mark_input {
+  flex: 0 0 40%;
+  padding: 10px;
+  margin-top: -10px;
+  background-color: rgb(204, 204, 204);
+}
+
+.pdf_width {
+  flex: 0 0 55%;
+  padding: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-subject-button,
+.delete-button,
+.generate-pdf-button {
+  padding: 8px 16px;
+  margin-top: 10px;
+  background-color: #0d766a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-subject-button:hover,
+.delete-button:hover,
+.generate-pdf-button:hover {
+  background-color: #11634d;
+}
+
+.subject-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.subject-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #0c4537;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.subject-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.subject-name,
+.subject-mark {
+  margin-bottom: 0px;
+}
+.subject-name {
+  margin-right: 100px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}

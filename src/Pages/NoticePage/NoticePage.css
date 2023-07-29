@@ -44,6 +44,18 @@
 }
 
 .iconcolor {
-  color: rgb(3, 124, 94);
+  color: rgb(2, 151, 154);
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .notices-page {
+    width: 85%;
+    overflow-x: auto; /* Enable horizontal scrolling for the table container */
+    margin-top: 20px;
+  }
+
+  .notices-table {
+    width: 800px;
+  }
 }

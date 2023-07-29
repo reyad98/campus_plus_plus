@@ -81,6 +81,36 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <div class="footer-icons">
+        <Link
+          to="https://web.facebook.com/kftcollegiateschool"
+          className="social-icon"
+          target="_blank"
+        >
+          <i className="fab fa-facebook-f"></i>
+        </Link>
+        <Link
+          to="https://www.twitter.com"
+          className="social-icon"
+          target="_blank"
+        >
+          <i className="fab fa-twitter"></i>
+        </Link>
+        <Link
+          to="https://www.instagram.com"
+          className="social-icon"
+          target="_blank"
+        >
+          <i className="fab fa-instagram"></i>
+        </Link>
+        <Link
+          to="https://www.linkedin.com"
+          className="social-icon"
+          target="_blank"
+        >
+          <i className="fab fa-linkedin-in"></i>
+        </Link>
+      </div>
       <div className="copy-right">
         &copy; {new Date().getFullYear()} Anisur Rahman
       </div>

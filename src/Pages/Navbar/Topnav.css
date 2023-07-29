@@ -1,25 +1,28 @@
+/* Topnav.css */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #044b42;
   color: #fff;
-  padding: 3px 40px;
+  padding: 3px 33px;
 }
 
 .navbar-logo {
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: small;
   text-decoration: none;
-  padding: 10px;
+  padding: 0px;
 }
 
 .navbar-logo_login {
   color: #090909;
   background-color: #54d2bd;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: 14px;
   text-decoration: none;
-  padding: 15px;
+  padding: 12px;
 }
 
 .navbar-menu {
@@ -31,7 +34,7 @@
 }
 
 .navbar-item {
-  padding: 12px;
+  padding: 7px;
 }
 
 .navbar-link {
@@ -50,6 +53,7 @@
 
   .navbar-menu {
     flex-direction: column;
+    margin-left: -30px;
   }
 
   .navbar-item {

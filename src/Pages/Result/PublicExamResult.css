@@ -1,0 +1,103 @@
+.result-section_pb {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 1px solid rgb(229, 229, 229);
+  padding: 30px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.265); /* You can adjust the values as needed */
+}
+.result-box-container_pb h2 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: #4d4d4d;
+}
+
+.result-box-container_pb {
+  width: 65%;
+  margin-right: 20px;
+  background-color: rgb(229, 229, 229);
+  padding: 20px;
+}
+
+.result-table_pb {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.result-table_pb th,
+.result-table_pb td {
+  padding: 10px;
+  text-align: center;
+}
+.result-table_pb td {
+  font-weight: bold;
+  color: #4d4d4d;
+  border: 1px solid rgb(120, 120, 120);
+}
+
+.result-table_pb th {
+  border: 1px solid rgb(183, 194, 187);
+
+  background-color: #0a514a;
+  padding: 15px;
+  color: rgb(210, 244, 233);
+}
+
+.result-table_pb tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.image-video-container {
+  border: 1px solid rgb(209, 208, 208);
+  width: 30%;
+  padding: 20px;
+  background-color: rgb(229, 229, 229);
+  box-sizing: border-box; /* Add this line */
+}
+
+.image-video-container iframe {
+  margin-top: 20px;
+}
+
+.result-image {
+  width: 100%;
+  height: auto;
+}
+
+.result-video {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .result-section_pb {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px;
+  }
+
+  .result-box-container_pb {
+    width: 90%;
+    overflow-x: auto;
+  }
+
+  .image-video-container {
+    margin-top: 40px;
+    width: 102%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-video-container iframe {
+    width: 98%;
+    max-width: 100%; /* Ensure the iframe doesn't overflow the container */
+    height: auto; /* Maintain the aspect ratio */
+  }
+}

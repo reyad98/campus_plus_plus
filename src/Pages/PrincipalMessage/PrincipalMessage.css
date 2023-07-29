@@ -1,0 +1,73 @@
+/* PrincipalMessage.css */
+
+.principal-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(238, 238, 238);
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.principal-image1 {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.principal-designation {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgb(108, 113, 112);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 0px;
+}
+
+/* Styling for the principal message text */
+.message-text {
+  margin-top: -10px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.message-text h2 {
+  margin-bottom: 10px;
+}
+
+/* Additional styling for a nice font and centering the text */
+.message-text h2,
+p {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .principal-message-container {
+    width: 85%;
+    background-color: rgb(225, 225, 225);
+  }
+
+  .message-text {
+    padding: 10px;
+  }
+}

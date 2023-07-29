@@ -11,8 +11,7 @@ const Topnav = () => {
           <li className="navbar-item">
             <Link to="/" className="navbar-logo">
               EIIN : 108162 | College Code : 1304 | School Code : 1216 |{" "}
-              <i className="fas fa-phone"></i>
-              {"  "} (+088) 01317600166
+              <i className="fas fa-phone"></i> (+088) 01317600166
             </Link>
           </li>
         </ul>
@@ -26,7 +25,7 @@ const Topnav = () => {
 
         <li className="navbar-item">
           <Link to="/login" className="navbar-logo_login">
-            <i className="fas fa-sign-in-alt"> </i> Login
+            <i className="fas fa-sign-in-alt"> </i> Admin Login
           </Link>
         </li>
       </ul>

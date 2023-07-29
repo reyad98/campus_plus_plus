@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import img10 from "../images/img10.jpg";
-import img11 from "../images/img11.jpg";
+import img14 from "../images/img14.jpg";
 import img6 from "../images/img6.jpg";
 import img7 from "../images/img7.jpg";
 import img8 from "../images/img8.jpg";
@@ -29,13 +29,13 @@ const teachersData = [
   },
   {
     id: 3,
-    name: "Michael Johnson",
-    designation: "Science Teacher",
+    name: "Siam Specialist",
+    designation: "CDI Teacher",
     subject: "Science",
     employeeId: "EMP003",
-    email: "michael.johnson@example.com",
+    email: "bj@example.com",
     phone: "4567891230",
-    imageSrc: img11,
+    imageSrc: img14,
   },
   {
     id: 4,
@@ -86,7 +86,7 @@ const Teachers = () => {
       <div className="teachers-box">
         <div className="teachers-list">
           {filteredTeachers.length === 0 ? (
-            <p>No results found</p>
+            <p className="not_found">Opps! No Results Found 🙁</p>
           ) : (
             filteredTeachers.map((teacher) => (
               <div key={teacher.id} className="teacher-card">
@@ -97,9 +97,7 @@ const Teachers = () => {
                   <h3 style={{ margin: 0 }}>
                     <strong>{teacher.name}</strong>
                   </h3>
-                  <p>
-                    <strong>Designation:</strong> {teacher.designation}
-                  </p>
+                  <p>{teacher.designation}</p>
                   <p>
                     <strong>Subject:</strong> {teacher.subject}
                   </p>
@@ -119,7 +117,7 @@ const Teachers = () => {
         </div>
 
         <div className="teachers-sidebar">
-          <h3>Subject Filter</h3>
+          <h3>Search Teachers</h3>
           <select value={selectedSubject} onChange={handleChangeSubject}>
             {subjects.map((subject) => (
               <option key={subject} value={subject}>
