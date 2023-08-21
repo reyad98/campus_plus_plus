@@ -40,7 +40,14 @@ const Navbar = () => {
         >
           <li>
             <span>
-              <i className="fas fa-info-circle"></i>
+              <Link to="/">
+                <i className="fas fa-home"></i>
+              </Link>
+            </span>
+          </li>
+          <li>
+            <span>
+              <i className="fas fa-info-circle about"></i>
               <Link to="/about">ABOUT</Link>
             </span>
           </li>
@@ -96,6 +103,7 @@ const Navbar = () => {
               <Link to="/academic/resultcard">Result Card</Link>
               <Link to="/academic/publicexamresult">Public Exam Result</Link>
               <Link to="/academic/latestnews">Latest News & Events</Link>
+              <Link to="/academic/achievement">Achievements of CA</Link>
             </div>
           </li>
           {/* Other links with dropdowns */}

@@ -28,7 +28,7 @@ small {
 
 .right-section {
   padding: 10px;
-  margin-right: 6px;
+  margin-right: 7px;
 }
 
 .nav-links {
@@ -57,6 +57,10 @@ small {
 /* Change text color on hover for nav-links */
 .nav-links li:hover span {
   color: #1cc3aa; /* Change to the desired color when hovering */
+}
+
+.about {
+  color: #1cc3aa;
 }
 
 .dropdown-content a {
@@ -109,9 +113,66 @@ span {
   font-weight: bold;
   color: #066454;
 }
+/* Hamburger icon styles */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+}
 
-@media (max-width: 768px) {
+.hamburger-icon .line {
+  width: 30px;
+  height: 4px;
+  background-color: #0c674a;
+  margin: 6px 0;
+  transition: 0.4s;
+  margin-right: -10px;
+}
+
+.hamburger-icon.active .line:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-icon.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.active .line:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
   .left-section {
     margin-left: -5px;
+  }
+  .right-section ul {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  /* Adjust mobile menu styles */
+  .main-nav.mobile-active .right-section ul {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    position: fixed;
+    top: 50px; /* Adjust this value as needed */
+    left: 10px; /* Adjust this value as needed */
+    background-color: #c8fcd8;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Set a higher z-index to place the menu above other elements */
+  }
+
+  .main-nav.mobile-active .right-section li {
+    margin: 10px 0;
+  }
+
+  .dropdown-content {
+    margin-left: 80px;
   }
 }

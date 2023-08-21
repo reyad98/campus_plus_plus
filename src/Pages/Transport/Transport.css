@@ -1,0 +1,115 @@
+/* TransportSection.css */
+
+.transport-section {
+  text-align: center;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.transport-section h2 {
+  font-size: 30px;
+  color: #105d50;
+  font-weight: 400;
+  padding: 15px;
+  background-color: #95e3d9;
+  border: 0.5px dotted #064a39;
+  border-radius: 5px;
+
+  width: 94%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.route-cards {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: -20px;
+  padding: 0px;
+}
+
+.route-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  width: 30%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  text-align: center;
+  position: relative; /* For positioning route lines */
+}
+
+.route-card h3 {
+  font-weight: 400;
+}
+
+.route-image {
+  max-width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.route-name {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.route-start-end {
+  font-size: 16px;
+  color: #555;
+}
+
+.route-description {
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.details-button {
+  color: rgb(44, 44, 44);
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  border: 1px solid rgb(173, 173, 173);
+  width: 90%;
+  background-color: #efefef;
+}
+
+.route-stops {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+}
+
+.route-stop-arrow {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(0, -50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid #ccc;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .transport-section {
+    padding: 0 0px;
+  }
+  .route-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .route-card {
+    width: 90%;
+  }
+}

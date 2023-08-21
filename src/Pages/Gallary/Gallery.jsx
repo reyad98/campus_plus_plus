@@ -8,12 +8,26 @@ import img11 from "../images/img11.jpg";
 import img2 from "../images/img2.jpg";
 import img3 from "../images/img3.jpg";
 import img4 from "../images/img4.jpg";
-import img5 from "../images/img5.jpg";
 import img7 from "../images/img7.jpg";
 import img9 from "../images/img9.jpg";
+import img13 from "../images/news1.jpg";
+import img12 from "../images/news2.jpg";
+import img5 from "../images/news3.jpg";
 
 const Gallery = () => {
-  const images = [img11, img2, img3, img4, img5, img7, img9, img10, img11];
+  const images = [
+    img11,
+    img2,
+    img12,
+    img13,
+    img3,
+    img4,
+    img5,
+    img7,
+    img9,
+    img10,
+    img11,
+  ];
 
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);

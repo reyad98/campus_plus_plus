@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import login2 from "../images/log4.jpg";
-import login1 from "../images/log5.jpg";
+import { Link } from "react-router-dom";
+import trans3 from "../images/trans3.jpg";
+import "./AdminLogin.css"; // You can define your styles in a separate CSS file
 
-import "./AdminLogin.css"; // Create this CSS file for styling
 const AdminLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -16,30 +16,45 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="admin-login-container">
-      <div className="inner-container left">
-        <img src={login1} alt="Image 1" />
-      </div>
-      <div className="inner-container_middle">
-        <form onSubmit={handleLogin}>
-          <h2>Admin Login</h2>
-          <input
-            type="text"
-            placeholder="Username or Email"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+    <div className="login-container">
+      <div className="login-card">
+        <div className="image-container">
+          <img
+            src={trans3}
+            alt="Login Background"
+            className="background-image"
           />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit">Login</button>
-        </form>
-      </div>
-      <div className="inner-container right">
-        <img src={login2} />
+          <div className="image-overlay_login">
+            <p>ADMIN LOGIN</p>
+          </div>
+        </div>
+        <div className="card-content">
+          <form onSubmit={handleLogin}>
+            <div className="input-container">
+              <i className="fas fa-envelope"></i>
+              <input
+                type="text"
+                placeholder="Email"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
+            <div className="input-container">
+              <i className="fas fa-lock"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <Link to="/dashboard">
+              <button className="login-button" type="submit">
+                Login
+              </button>
+            </Link>
+          </form>
+        </div>
       </div>
     </div>
   );

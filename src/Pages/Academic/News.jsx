@@ -6,7 +6,7 @@ import news2 from "../images/news2.jpg";
 import news3 from "../images/news3.jpg";
 import "./News.css"; // Import the CSS file for styling
 
-const News = () => {
+const News = ({ limit }) => {
   const newsItems = [
     {
       id: 1,
@@ -50,15 +50,17 @@ const News = () => {
     },
   ];
 
+  const slicedNews = limit ? newsItems.slice(0, limit) : newsItems;
+
   return (
     <div className="news-page">
       <header>
-        <h1>Latest News Update</h1>
+        <h1>LATEST NEWS UPDATE</h1>
       </header>
 
       <main>
         <section className="news-container">
-          {newsItems.map((item) => (
+          {slicedNews.map((item) => (
             <article className="news-item" key={item.id}>
               <img src={item.image} />
               <div className="newscarddesc">

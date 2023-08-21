@@ -4,7 +4,7 @@ import "./PrincipalMessage.css";
 const PrincipalMessage = () => {
   return (
     <div className="principal-message-container">
-      <div className="image-container">
+      <div className="image-container_principal">
         <img src={img9} alt="Principal" className="principal-image1" />
       </div>
       <p className="principal-designation">

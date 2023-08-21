@@ -44,10 +44,11 @@
   margin-bottom: 20px;
   align-items: center;
   transition: background-color 0.3s ease;
+  border-radius: 5px;
 }
 
 .teacher-card:hover {
-  background-color: rgb(30, 202, 179);
+  background-color: rgb(73, 206, 184);
 }
 
 .teacher-image img {
@@ -58,7 +59,7 @@
 }
 
 .teacher-details {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .teacher-details h3 strong {
@@ -73,6 +74,8 @@
 }
 
 .teachers-sidebar {
+  border-radius: 5px;
+
   flex-basis: 35%;
   padding: 20px;
   border: 1px solid #ccc;
@@ -103,12 +106,19 @@
 
 @media (max-width: 768px) {
   .teachers-container {
-    padding: 15px;
+    padding: 10px;
   }
   .teachers-box {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
+    align-items: center;
   }
+
+  .teachers-list {
+    flex-basis: 95%;
+    align-items: center;
+  }
+
   .teachers-container h2 {
     font-size: 26px;
   }
@@ -122,11 +132,14 @@
   }
 
   .teacher-card {
-    width: 89%; /* Make both boxes take full width on mobile devices */
+    width: 88%; /* Make both boxes take full width on mobile devices */
+  }
+  .teacher-details {
+    margin-left: 10px;
   }
 
   .teachers-sidebar {
-    width: 100%; /* Make both boxes take full width on mobile devices */
+    width: 87%; /* Make both boxes take full width on mobile devices */
   }
 
   .teacher-image img {
@@ -142,7 +155,7 @@
   }
 
   .search-container input {
-    width: 93%;
+    width: 92%;
     padding: 10px;
   }
 }

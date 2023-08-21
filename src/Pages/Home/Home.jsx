@@ -1,5 +1,7 @@
 // Home.js
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import BoardResult from "../Result/BoardResult";
 import img13 from "../images/02.jpg";
 import img12 from "../images/2363316.jpg";
 import img1 from "../images/img1.jpg";
@@ -12,16 +14,17 @@ import img5 from "../images/img5.jpg";
 import img6 from "../images/img6.jpg";
 import img7 from "../images/img7.jpg";
 import img8 from "../images/img8.jpg";
-import img9 from "../images/img9.jpg";
+import kfts from "../images/kfts.jpg";
 import news1 from "../images/news1.jpg";
+import trans1 from "../images/trans1.jpg";
+import Achievement from "./Achievement";
 
-import { Link } from "react-router-dom";
-import BoardResult from "../Result/BoardResult";
+import News from "../Academic/News";
+import NoticePage from "../NoticePage/NoticePage";
 import "./Home.css";
-import RecentActivity from "./RecentActivity";
 
 const Home = () => {
-  const images = [img1, img2, img4, news1, img9];
+  const images = [img1, img2, trans1, news1, kfts];
 
   const imges_store = [img6, img7, img8, img3, img10, img11, img12, img13];
 
@@ -97,7 +100,7 @@ const Home = () => {
           <img src={img8} alt="Principal" className="principal-image" />
           <div className="principal-info">
             <p>
-              <strong>Colonel Babar Md. Salim, psc, MDS, MBA (Retd.)</strong>
+              <strong>Mejor General Md Yolin MDS, MBA (Retd.)</strong>
             </p>
 
             <Link to="/administration/principalmessage">See More...</Link>
@@ -133,20 +136,22 @@ const Home = () => {
             dignissim felis. dictum. Nulla facilisi. Nunc nec erat nec nunc
             tincidunt bibendum.
           </p>
-          <button className="read-more-btn">Read More</button>
+          <Link to="/about">
+            <button className="read-more-btn_about">Read More</button>
+          </Link>
         </div>
         <div className="right-section_home">
           <div className="info-box1">
-            <h3>400+</h3>
-            <h3>Students</h3>
+            <h3 className="s_count">400+</h3>
+            <h2>Students</h2>
           </div>
           <div className="info-box2">
-            <h3>30+</h3>
-            <h3>Teachers</h3>
+            <h3 className="s_count">30+</h3>
+            <h2>Teachers</h2>
           </div>
           <div className="info-box3">
-            <h3>10+</h3>
-            <h3>Total Staff</h3>
+            <h3 className="s_count">10+</h3>
+            <h2>Staff</h2>
           </div>
           <div className="images-row">
             <div className="image-box">
@@ -161,21 +166,12 @@ const Home = () => {
 
       <section className="notice-board-section">
         <div className="notice-section">
-          <h2>নোটিশ বোর্ড</h2>
-          {notices.map((notice, index) => (
-            <div className="notice-row" key={notice.id}>
-              <div className="notice-serial">{index + 1}</div>
-              <div className="notice-date">{notice.date}</div>
-              <div className="notice">{notice.notice}</div>
-            </div>
-          ))}
-          {notices.length >= 3 && (
-            <div className="more-button">
-              <Link to="/notice">
-                <i className="fas fa-chevron-circle-right"></i> More
-              </Link>
-            </div>
-          )}
+          <NoticePage limit={3}></NoticePage>
+          <div className="more-button">
+            <Link to="/notice">
+              <i className="fas fa-chevron-circle-right"></i> More
+            </Link>
+          </div>
         </div>
 
         <div className="important-links-section">
@@ -224,25 +220,18 @@ const Home = () => {
           </Link>
         </div>
       </section>
+      <div className="latest_news_update">
+        <News limit={3}></News>
+      </div>
 
-      <RecentActivity></RecentActivity>
+      <div className="achievement_sec">
+        <Achievement limit={5}></Achievement>
 
-      <section className="latest-news-section">
-        <h2>সর্বশেষ খবর আপডেট</h2>
-        <div className="latest-news-row">
-          {newsData.map((news, index) => (
-            <div key={index} className="news-card">
-              <img src={news.image} alt={news.title} />
-              <div className="news-info">
-                <span className="news-date">{news.title}</span>
-                <hr className="news-divider" />
-                <p className="news-content">{news.content}</p>
-                <button className="read-more-btn">আরও পড়ুন</button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+        <div className="triangle top-left-triangle"></div>
+        <div className="triangle top-right-triangle"></div>
+        <div className="triangle bottom-left-triangle"></div>
+        <div className="triangle bottom-right-triangle"></div>
+      </div>
 
       <BoardResult></BoardResult>
 

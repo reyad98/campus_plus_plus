@@ -18,7 +18,7 @@
 
 .navbar-logo_login {
   color: #090909;
-  background-color: #54d2bd;
+  background-color: #96fadb;
   font-weight: bold;
   font-size: 14px;
   text-decoration: none;
@@ -55,8 +55,18 @@
     flex-direction: column;
     margin-left: -30px;
   }
+  .navbar-logo_apply {
+    padding: 8px;
+    border: 1px solid #00b798;
+  }
 
   .navbar-item {
     margin: 5px 0;
+  }
+
+  .navbar-logo_login {
+    color: #60ffdf;
+    background-color: #044b42;
+    border: 1px dotted #00b798;
   }
 }

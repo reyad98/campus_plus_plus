@@ -18,12 +18,6 @@ const Topnav = () => {
       </div>
       <ul className="navbar-menu">
         <li className="navbar-item">
-          <Link to="/" className="navbar-logo">
-            Apply Online
-          </Link>
-        </li>
-
-        <li className="navbar-item">
           <Link to="/login" className="navbar-logo_login">
             <i className="fas fa-sign-in-alt"> </i> Admin Login
           </Link>

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./NoticePage.css";
 
-const NoticePage = () => {
+const NoticePage = ({ limit }) => {
   const noticesData = [
     {
       date: "13 Jun, 2023",
@@ -33,9 +33,11 @@ const NoticePage = () => {
     // Add more notice data as needed
   ];
 
+  const slicedNotices = limit ? noticesData.slice(0, limit) : noticesData;
+
   return (
     <div className="notices-page">
-      <h2>NOTICE BOARD of CODING ACADEMY</h2>
+      <h2>নোটিস বোর্ড</h2>
       <table className="notices-table">
         <thead>
           <tr>
@@ -48,7 +50,7 @@ const NoticePage = () => {
           </tr>
         </thead>
         <tbody>
-          {noticesData.map((notice) => (
+          {slicedNotices.map((notice) => (
             <tr key={notice.serial}>
               <td>{notice.date}</td>
               <td>{notice.serial}</td>

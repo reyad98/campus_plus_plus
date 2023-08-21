@@ -50,11 +50,11 @@ td {
 }
 
 .result-table tr:nth-child(even) {
-  background-color: #06080ab3;
+  background-color: #020305a7;
   color: white;
 }
 .result-table tr:nth-child(odd) {
-  background-color: #2c2d2fb3;
+  background-color: #01040bcb;
   color: white;
 }
 /* Mobile responsive */

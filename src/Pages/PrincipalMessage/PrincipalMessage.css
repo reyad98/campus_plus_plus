@@ -15,7 +15,7 @@
   background-color: rgb(238, 238, 238);
 }
 
-.image-container {
+.image-container_principal {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -65,6 +65,10 @@ p {
   .principal-message-container {
     width: 85%;
     background-color: rgb(225, 225, 225);
+  }
+  .principal-image1 {
+    height: 250px;
+    width: 250px;
   }
 
   .message-text {
